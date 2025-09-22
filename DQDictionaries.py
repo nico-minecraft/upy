@@ -11,10 +11,20 @@ currency_rates['GBP'] = 0.72
 currency_rates['JPY'] = 109.35
 currency_rates['CAD'] = 1.21
 
+laptop_product = {'name': 'Laptop', 'price': 899.00, 'currency': 'USD', 'quantity': 2, 'user_rating': 3.34, 'category': 'Hardware'}
 
-print(currency_rates)
+is_in_dict_1 = ('price' in laptop_product)
+is_in_dict_2 = ('CAD' in currency_rates)
 
-gbp_rate = currency_rates['GBP']
-print(gbp_rate)
-print(currency_rates)
-
+if "price" in laptop_product:
+    laptop_price = laptop_product['price']
+    print(laptop_price)
+    
+if "CAD" in currency_rates:
+    cad_rate = currency_rates['CAD']
+    print(cad_rate)
+    
+if "price" in laptop_product and "CAD" in currency_rates:
+    converted_price = laptop_price * cad_rate
+    print(converted_price)
+    
